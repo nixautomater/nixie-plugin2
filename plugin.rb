@@ -23,7 +23,7 @@ after_initialize do
   if defined?(UserAction::SOLVED)
     require_dependency 'group_user_serializer'
     class ::GroupUserSerializer
-      attributes :solved_count
+      attributes :solved_count, :post_count
 
       def solved_count
         UserAction
